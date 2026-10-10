@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Bot, Send } from "lucide-react";
 import { getReply } from "./botBrain";
 
 // ChatWindow: the live demo chat. Handles messages, the "thinking" typing
 // indicator, a realistic delay (so it feels like real AI), and lead capture.
 function ChatWindow() {
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hi! I'm Nova 🤖 — the AI assistant for Nova Labs. Ask me anything about our services, pricing, or book a call." },
+    { from: "bot", text: "Hi! I'm Nova, the AI assistant for Nova Labs. Ask me anything about our services, pricing, or book a call." },
   ]);
   const [chips, setChips] = useState(["What do you offer?", "Pricing", "Book a call"]);
   const [input, setInput] = useState("");
@@ -34,7 +35,7 @@ function ChatWindow() {
       setTyping(true);
       setTimeout(() => {
         setTyping(false);
-        setMessages((m) => [...m, { from: "bot", text: "Got it ✅ Thank you! The team will reach out within 24 hours. Anything else I can help with in the meantime?" }]);
+        setMessages((m) => [...m, { from: "bot", text: "Got it — thank you! The team will reach out within 24 hours. Anything else I can help with in the meantime?" }]);
         setChips(["Services", "Pricing"]);
       }, 1400);
       return;
@@ -56,10 +57,10 @@ function ChatWindow() {
   return (
     <div className="chat-shell">
       <div className="chat-top">
-        <div className="chat-avatar">N</div>
+        <div className="chat-avatar"><Bot /></div>
         <div>
           <div className="ct-name">Nova</div>
-          <div className="ct-status">Online · AI Assistant</div>
+          <div className="ct-status">AI Assistant</div>
         </div>
       </div>
 
@@ -109,7 +110,7 @@ function ChatWindow() {
           placeholder={collectingLead ? "Type your name & email..." : "Ask Nova anything..."}
         />
         <button type="submit" aria-label="Send">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>
+          <Send size={18} />
         </button>
       </form>
     </div>

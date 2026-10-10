@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Bot } from "lucide-react";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container">
-        <div className="logo"><span className="logo-dot" />Nova</div>
+        <div className="logo"><span className="logo-mark"><Bot /></span>Nova</div>
         <ul className="nav-links">
           <li><a href="#features">Features</a></li>
           <li><a href="#how">How it works</a></li>

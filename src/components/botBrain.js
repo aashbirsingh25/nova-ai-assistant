@@ -11,7 +11,7 @@ const intents = [
   {
     name: "greeting",
     patterns: ["hi", "hello", "hey", "good morning", "good evening", "yo"],
-    reply: "Hey there! 👋 I'm Nova, the AI assistant for Nova Labs. I can help with our services, pricing, booking a call, or answering any questions. What brings you here today?",
+    reply: "Hey there! I'm Nova, the AI assistant for Nova Labs. I can help with our services, pricing, booking a call, or answering any questions. What brings you here today?",
     chips: ["What do you offer?", "Pricing", "Book a call"],
   },
   {

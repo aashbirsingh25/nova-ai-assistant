@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 import ChatWindow from "./ChatWindow";
 import Counter from "./Counter";
 
@@ -13,7 +14,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="hero-badge"><span className="pulse" /> Powered by AI</div>
+            <div className="hero-badge"><Sparkles /> Powered by AI</div>
             <h1>Your 24/7 <span className="gradient-text">AI assistant</span> for business</h1>
             <p>
               Nova answers customer questions, captures leads, and books
@@ -25,8 +26,8 @@ function Hero() {
             </div>
             <div className="hero-stats">
               <Counter staticText="24/7" label="Always online" />
-              <Counter value={3} suffix="×" label="More leads" />
               <Counter staticText="<1s" label="Response time" />
+              <Counter staticText="0" label="Enquiries missed" />
             </div>
           </motion.div>
 

@@ -21,8 +21,8 @@ function CTA() {
               Start your free trial. Your AI assistant can be live by tomorrow.
             </p>
             {sent ? (
-              <p style={{ fontSize: "1.1rem", color: "#4ade80" }}>
-                ✅ Thanks! We'll email you setup details at <strong>{email}</strong> shortly.
+              <p style={{ fontSize: "1.1rem", color: "#fff" }}>
+                Thanks! We&apos;ll email you setup details at <strong>{email}</strong> shortly.
               </p>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", gap: "12px", maxWidth: "440px", margin: "0 auto", flexWrap: "wrap", justifyContent: "center" }}>
